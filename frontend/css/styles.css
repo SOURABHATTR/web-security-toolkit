@@ -1,0 +1,169 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1em 2em;
+}
+nav .logo {
+  font-size: 1.8em;
+  color: #fff;
+  font-weight: bold;
+}
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
+nav .nav-links li {
+  margin-left: 1.5em;
+}
+nav .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav .nav-links li a:hover {
+  color: #fdbb2d;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4em 2em;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  color: #fff;
+}
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+.hero .btn {
+  background: #fff;
+  color: #333;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+.hero .btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 2em;
+}
+
+/* Card Styles */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.card h2 {
+  margin-bottom: 1em;
+  color: #1a2a6c;
+}
+.card input[type="text"],
+.card input[type="email"] {
+  width: 80%;
+  padding: 0.6em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+.card input[type="text"]:focus,
+.card input[type="email"]:focus {
+  border-color: #1a2a6c;
+  outline: none;
+}
+.card button {
+  padding: 0.6em 1.2em;
+  background: #1a2a6c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.card button:hover {
+  background: #b21f1f;
+}
+div[id$="Result"] {
+  margin-top: 1em;
+  background: #eef;
+  padding: 1em;
+  border-radius: 4px;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/* Style for scan result box */
+#scanResult, 
+#threatResult, 
+#emailResult, 
+#sslResult, 
+#subdomainResult, 
+#portResult, 
+#darkwebResult, 
+#reportResult {
+    max-height: 200px;  /* Limit height */
+    overflow-y: auto;   /* Enable scrolling if needed */
+    word-wrap: break-word; /* Ensure text wraps properly */
+    white-space: pre-wrap; /* Preserve formatting */
+    background-color: #f4f4f4; /* Light background for readability */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}

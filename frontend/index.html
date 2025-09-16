@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Security Toolkit</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <div class="logo">Web Security Toolkit</div>
+      <ul class="nav-links">
+        <li><a href="#scan">Scan</a></li>
+        <li><a href="#threat">Threat</a></li>
+        <li><a href="#email">Email</a></li>
+        <li><a href="#ssl">SSL</a></li>
+        <li><a href="#subdomain">Subdomain</a></li>
+        <li><a href="#port">Port</a></li>
+        <li><a href="#darkweb">Dark Web</a></li>
+        <li><a href="#report">Report</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Protect Your Digital Assets</h1>
+      <p>Automated Security Scanning and Threat Analysis at Your Fingertips</p>
+      <a href="#dashboard" class="btn">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="dashboard">
+    <div class="container">
+      
+      <!-- Web Vulnerability Scan Section -->
+      <section id="scan" class="card">
+        <h2>Web Vulnerability Scan</h2>
+        <input type="text" id="scanUrl" placeholder="Enter website URL">
+        <button onclick="performScan()">Scan</button>
+        <div id="scanResult" class="result"></div>
+      </section>
+
+      <!-- Threat Intelligence Section -->
+      <section id="threat" class="card">
+        <h2>Threat Intelligence</h2>
+        <input type="text" id="ipInput" placeholder="Enter IP address">
+        <button onclick="checkThreat()">Check Threat</button>
+        <div id="threatResult" class="result"></div>
+      </section>
+
+      <!-- Email Security Check Section -->
+      <section id="email" class="card">
+        <h2>Email Security Check</h2>
+        <input type="email" id="emailInput" placeholder="Enter email">
+        <button onclick="checkEmail()">Check Email</button>
+        <div id="emailResult" class="result"></div>
+      </section>
+
+      <!-- SSL Security Check Section -->
+      <section id="ssl" class="card">
+        <h2>SSL Security Check</h2>
+        <input type="text" id="sslDomain" placeholder="Enter domain">
+        <button onclick="checkSSL()">Check SSL</button>
+        <div id="sslResult" class="result"></div>
+      </section>
+
+      <!-- Subdomain Enumeration Section -->
+      <section id="subdomain" class="card">
+        <h2>Subdomain Enumeration</h2>
+        <input type="text" id="subdomainInput" placeholder="Enter domain">
+        <button onclick="enumerateSubdomains()">Enumerate</button>
+        <div id="subdomainResult" class="result"></div>
+      </section>
+
+      <!-- Port Scanner Section -->
+      <section id="port" class="card">
+        <h2>Port Scanner</h2>
+        <input type="text" id="portIp" placeholder="Enter IP address">
+        <button onclick="scanPorts()">Scan Ports</button>
+        <div id="portResult" class="result"></div>
+      </section>
+
+      <!-- Dark Web Monitoring Section -->
+      <!-- Dark Web Monitoring Section -->
+<section id="darkweb" class="card">
+  <h2>Dark Web Monitoring</h2>
+  <input type="text" id="darkwebQuery" placeholder="Enter domain or keyword" />
+  <button id="darkwebBtn">Search</button>
+  <div id="darkwebResult" class="result"></div>
+</section>
+
+      <!-- Report Generation Section -->
+      <section id="report" class="card">
+        <h2>📝 Generate Security Report</h2>
+        
+        <div class="button-container">
+          <button id="reportBtn" class="btn-primary">Generate Report</button>
+        </div>
+        
+        <div id="reportResult" class="result"></div>
+      </section>
+      
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Web Security Toolkit. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
