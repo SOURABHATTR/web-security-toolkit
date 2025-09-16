@@ -1,7 +1,7 @@
 import requests
 
 # Use your API key from Abstract API
-API_KEY = "2eaa650b9e67451093953a5afd95a62d"
+API_KEY = ""
 BASE_URL = "https://emailvalidation.abstractapi.com/v1/"
 
 
@@ -21,3 +21,4 @@ def check_email(email):
         return data
     else:
         return {"error": "Failed to fetch email validation data"}
+
