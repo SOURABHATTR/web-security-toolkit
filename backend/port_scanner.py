@@ -1,7 +1,7 @@
 import requests
 
 # Add your free Shodan API key here
-SHODAN_API_KEY = "TQbcVXBmm0p91yX1oT5tOvlikFuKV5aO"
+SHODAN_API_KEY = ""
 
 def scan_ports(ip):
     url = f"https://api.shodan.io/shodan/host/{ip}?key={SHODAN_API_KEY}"
@@ -15,3 +15,4 @@ def scan_ports(ip):
         return {"ip": ip, "open_ports": open_ports}
     except requests.exceptions.RequestException as e:
         return {"error": f"Port scan failed: {str(e)}"}
+
